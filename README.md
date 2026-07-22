@@ -17,7 +17,8 @@ To ensure that the dataset had sufficient data to detect small changes during th
 To ensure data integrity and a goodness-of-fit check on the observed user splits to rule out sample allocation.
 - There were no missing values in the entire dataset also, no duplicates were found.
 - One outlier(sum_gamerounds = 49854) was found using Box plot visual, and it was removed.
-  ![outlier]('boxplot_outlier.png')
+  ![outlier]('boxplot_outlier.png').
+  
 - Sample Ratio Mismatch(SRM) check: SRM check was done using Chi-Square goodness-of-fit test and the observed split was [44699, 45489] and the expected was [45094,45094]. The chi-square test = 6.9200 and the p-value = 0.0085 indicates a statistically significant sample ratio mismatch.(The experiment was continued with sample ratio mismatch in mind.)
 - A/A testing was conducted to confirm the user groups behaved identically before encountering any gate and a Welch's T-test was conducted on pre-game activity.(sum_gamerounds <  30), and the results t-stat = 1.8009 and p-value = 0.0717 indicate randomization was clean and had zero bias.
 
